@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glass Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <!-- Animated background blobs for the glassmorphism effect -->
+  <div class="bg-blobs">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <main class="calculator" role="application" aria-label="Calculator">
+    <!-- Display: shows the current expression and the live result -->
+    <section class="display">
+      <div class="expression" id="expression" aria-live="polite">0</div>
+      <div class="result" id="result">0</div>
+    </section>
+
+    <!-- Buttons grid -->
+    <section class="keys">
+      <!-- Row 1: scientific + clear -->
+      <button class="key fn" data-action="clear">C</button>
+      <button class="key fn" data-action="delete">DEL</button>
+      <button class="key fn" data-value="Math.sqrt(">√</button>
+      <button class="key op" data-value="**">x^y</button>
+
+      <!-- Row 2 -->
+      <button class="key num" data-value="7">7</button>
+      <button class="key num" data-value="8">8</button>
+      <button class="key num" data-value="9">9</button>
+      <button class="key op" data-value="/">÷</button>
+
+      <!-- Row 3 -->
+      <button class="key num" data-value="4">4</button>
+      <button class="key num" data-value="5">5</button>
+      <button class="key num" data-value="6">6</button>
+      <button class="key op" data-value="*">×</button>
+
+      <!-- Row 4 -->
+      <button class="key num" data-value="1">1</button>
+      <button class="key num" data-value="2">2</button>
+      <button class="key num" data-value="3">3</button>
+      <button class="key op" data-value="-">−</button>
+
+      <!-- Row 5 -->
+      <button class="key num" data-value="0">0</button>
+      <button class="key num" data-value=".">.</button>
+      <button class="key op" data-value="%">%</button>
+      <button class="key op" data-value="+">+</button>
+
+      <!-- Row 6: equals spans full width -->
+      <button class="key eq" data-action="equals">=</button>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
