@@ -1,2 +1,4 @@
-Flask==3.0.3
-gunicorn==22.0.0
+Go to Cmd and type
+pip install Flask==3.0.3
+pip install gunicorn==22.0.0
+then you will get these two modules into your python the you can use them easly
